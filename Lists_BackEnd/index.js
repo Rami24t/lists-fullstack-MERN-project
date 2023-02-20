@@ -25,7 +25,7 @@ app.use('/*', body('*').trim().escape());
 
 
 app.use(cors({
-    origin: process.env.NODE_ENV === 'production' ? 'https://lists-client-fullstack-mern-project-frontend.vercel.app' : 'http://localhost:3000',
+    origin: process.env.NODE_ENV === 'production' ? 'https://lists-client-fullstack-mern-project-frontend.vercel.app' : ['http://localhost:3000', 'http://localhost:3001'],
     credentials: true,
     preflightContinue: true,
     // "methods": "GET,HEAD,PUT,PATCH,POST,DELETE, OPTIONS"

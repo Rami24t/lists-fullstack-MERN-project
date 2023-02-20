@@ -11,7 +11,7 @@ import DeedDetails from './components/DeedDetails';
 export default function App() {
   const [deeds, setDeeds] = useState([]);
   // fetch data from API
-  const URL = '/deeds';
+  let URL = '/deeds';
   const baseURL = process.env.REACT_APP_API_URL || 'http://localhost:4001';
   URL = baseURL + URL;
   async function getData(url = URL) {
