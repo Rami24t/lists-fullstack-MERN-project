@@ -1,3 +1,7 @@
 node_modules
 .env
 .vscode
+./.env
+/.env
+Lists_Backend/.env
+Lists_Frontend/.env

@@ -14,11 +14,22 @@ app.use(express.urlencoded({extended: true})) //middleware for parsing urlencode
 // app.use("/static", express.static("static")) // to set a folder for static file serving
 // import the dbconnection module
 const dbconnect = require("./dbconfig/dbconnection")
+const cors = require('cors')
 
 
 // import the deedsRouter
 const deedsRouter = require("./routes/deedsRouter")
 
+app.use('/*', body('*').trim().escape())
+
+
+app.use(cors({
+    origin: process.env.NODE_ENV === 'production' ? 'https://lists-fullstack-mern-project-backend.vercel.app' : 'http://localhost:3000',
+    credentials: true,
+    preflightContinue: true,
+    // "methods": "GET,HEAD,PUT,PATCH,POST,DELETE, OPTIONS"
+}))
+// app.options(cors());
 
 app.use('/deeds',deedsRouter)
 
