@@ -12,7 +12,7 @@ export default function App() {
   const [deeds, setDeeds] = useState([]);
   // fetch data from API
   let URL = '/deeds';
-  const baseURL = process.env.REACT_APP_API_URL || 'http://localhost:4001';
+  const baseURL = process.env.REACT_APP_BASE_URL || 'http://localhost:4001';
   URL = baseURL + URL;
   async function getData(url = URL) {
     const response = await fetch(url);
