@@ -210,8 +210,8 @@ return (
                 />
               </div>
             ) : (loading ? ('LOADING...') :
-              ('You do not have any deeds yet!')
-            )}
+              ('You do not have any ' + ((title?.startsWith('Deed') || !title ?'Deed':  (title.startsWith('Project') ? 'Project' : 'Item')).toLocaleLowerCase() + ' yet!')
+              ))}
           </div>
         }
       />
