@@ -13,14 +13,15 @@ app.use(express.json()) // middleware for parsing incoming json
 app.use(express.urlencoded({extended: true})) //middleware for parsing urlencoded data
 // app.use("/static", express.static("static")) // to set a folder for static file serving
 // import the dbconnection module
-const dbconnect = require("./dbconfig/dbconnection")
+const dbconnect = require("./src/dbconfig/dbconnection")
 const cors = require('cors')
+const { body, validationResult } = require('express-validator');
 
 
 // import the deedsRouter
-const deedsRouter = require("./routes/deedsRouter")
+const deedsRouter = require("./src/routes/deedsRouter")
 
-app.use('/*', body('*').trim().escape())
+app.use('/*', body('*').trim().escape());
 
 
 app.use(cors({
