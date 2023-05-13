@@ -175,6 +175,10 @@ useEffect(() => {
   }
 }, [])
 
+// React code to base the title of the document on the title of the page (Deeds, Shopping List, Projects)
+useEffect(() => {
+  document.title = title;
+}, [title])
 
 return (
   <div style={{backgroundImage: 'url("https://source.unsplash.com/random/'+window.innerWidth+'×'+window.innerHeight+'/?'+title?.split(' ')[0]||'deeds'+'")', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover', backgroundAttachment: 'fixed'}}>
