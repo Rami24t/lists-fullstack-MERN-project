@@ -1,5 +1,5 @@
-# lists-fullstack-MERN-project
-An app that you can use to create, update, delete deeds/items/projects that you want to keep track of
+# Lists (fullstack MERN project)
+A simple app that you can use to create, track, update, delete a list of deeds,items, or projects.
 
 # Live demo link
 https://lists-client-fullstack-mern-project-frontend.vercel.app/home
